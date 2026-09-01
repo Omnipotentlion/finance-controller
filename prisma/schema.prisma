@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Order {
+  id         String    @id @default(cuid())
+  batch_id   String
+  created_at DateTime  @default(now())
+
+  payments   Payment[]
+
+  @@index([batch_id])
+}
+
+model Payment {
+  id         String    @id @default(cuid())
+  batch_id   String
+  order_id   String
+  amount     Int       // Integer representation in paise
+  status     String
+  created_at DateTime  @default(now())
+
+  order      Order     @relation(fields: [order_id], references: [id])
+  items      SettlementItem[]
+
+  @@index([order_id])
+  @@index([batch_id])
+}
+
+model Settlement {
+  id         String    @id @default(cuid())
+  batch_id   String
+  utr        String?
+  status     String
+  amount     Int
+  created_at DateTime  @default(now())
+
+  items      SettlementItem[]
+
+  @@index([utr])
+  @@index([batch_id])
+}
+
+model SettlementItem {
+  id             String      @id @default(cuid())
+  batch_id       String
+  settlement_id  String?
+  payment_id     String?
+  type           String
+  gross_amount   Int
+  fee            Int
+  tax            Int
+  net_amount     Int
+
+  settlement     Settlement? @relation(fields: [settlement_id], references: [id])
+  payment        Payment?    @relation(fields: [payment_id], references: [id])
+
+  @@index([settlement_id])
+  @@index([payment_id])
+  @@index([batch_id])
+}
+
+model BankTransaction {
+  id               String   @id @default(cuid())
+  batch_id         String
+  utr              String?
+  amount           Int
+  type             String
+  transaction_date DateTime
+
+  @@index([utr])
+  @@index([batch_id])
+}
+
+model ReconciliationResult {
+  id                     String  @id @default(cuid())
+  batch_id               String
+  record_type            String
+  record_id              String
+  status                 String
+  exception_type         String?
+  ai_explanation         String?
+  ai_resolution_reason   String?
+
+  @@index([batch_id])
+  @@index([record_type, record_id])
+}
+
+model GroundTruth {
+  id                      String  @id @default(cuid())
+  batch_id                String
+  record_type             String
+  record_id               String
+  expected_status         String
+  expected_exception_type String?
+
+  @@index([batch_id])
+}
