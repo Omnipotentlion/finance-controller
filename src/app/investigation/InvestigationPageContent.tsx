@@ -220,7 +220,7 @@ export function InvestigationPageContent({
         <footer className="fc-footer">
           <div>
             <span className="fc-footer-brand">
-              FINANCE CONTROLLER
+              LedgerAnalyser
             </span>
 
             <span>

@@ -3,7 +3,7 @@
 ## Design goal
 Create a premium fintech control center, not a generic monotonous admin dashboard and not a Razorpay UI clone.
 
-Use a distinct Finance Controller visual identity while maintaining professional fintech clarity.
+Use a distinct LedgerAnalyser visual identity while maintaining professional fintech clarity.
 
 ## Core screens
 

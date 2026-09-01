@@ -1,4 +1,4 @@
-# Antigravity Build Plan: Finance Controller
+# Antigravity Build Plan: LedgerAnalyser
 
 ## 1. FINAL TECH STACK
 * **Frontend:** Next.js (React), Tailwind CSS.

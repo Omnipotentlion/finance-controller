@@ -246,7 +246,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <span className="fc-system-mark">FC</span>
             <span className="font-semibold tracking-tight">
-              FINANCE CONTROLLER
+              LedgerAnalyser
             </span>
             <span className="fc-divider" />
             <span className="hidden sm:inline text-[10px]">
@@ -435,7 +435,7 @@ export default function Home() {
         <footer className="fc-footer">
           <div>
             <span className="fc-footer-brand">
-              FINANCE CONTROLLER
+              LedgerAnalyser
             </span>
 
             <span>

@@ -1,4 +1,4 @@
-# Finance Controller — AI-Powered Reconciliation Control Center
+# LedgerAnalyser — AI-Powered Reconciliation Control Center
 
 > **Track 04 · Razorpay AI Buildathon 2026**
 >
@@ -78,7 +78,7 @@ Tables created:
 npm run dev
 ```
 
-Open **http://localhost:3000** — the Finance Controller AI Control Center will load.
+Open **http://localhost:3000** — the LedgerAnalyser AI Control Center will load.
 
 ---
 

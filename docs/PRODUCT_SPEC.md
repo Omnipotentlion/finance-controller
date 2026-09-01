@@ -1,7 +1,7 @@
 # Product Specification
 
 ## Product
-Finance Controller — an AI-powered finance-ops control loop.
+LedgerAnalyser — an AI-powered finance-ops control loop.
 
 ## User
 Primary user: finance operations analyst/controller at a merchant business.

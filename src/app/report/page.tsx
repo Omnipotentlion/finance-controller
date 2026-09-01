@@ -67,7 +67,7 @@ export default function ControlReportPage() {
         <footer className="fc-footer">
           <div>
             <span className="fc-footer-brand">
-              FINANCE CONTROLLER
+              LedgerAnalyser
             </span>
             <span>
               Control Report · Track 04 · Razorpay AI Buildathon

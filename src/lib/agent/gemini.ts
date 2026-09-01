@@ -30,7 +30,7 @@ export const INVESTIGATION_SCHEMA = {
         },
         controllerNote: {
             type: 'string',
-            description: 'Concise explanation suitable for a finance controller.',
+            description: 'Concise explanation suitable for a LedgerAnalyser.',
         },
     },
     required: [

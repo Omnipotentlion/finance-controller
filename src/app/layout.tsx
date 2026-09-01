@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Finance Controller | AI-Powered Reconciliation Control Center',
+  title: 'LedgerAnalyser | AI-Powered Reconciliation Control Center',
   description:
     'Multi-source financial reconciliation engine with deterministic verification, AI root-cause investigation, and bounded auto-resolution. Track 04 — Razorpay AI Buildathon 2026.',
-  keywords: ['finance controller', 'reconciliation', 'settlement', 'payment operations', 'AI finance'],
+  keywords: ['LedgerAnalyser', 'reconciliation', 'settlement', 'payment operations', 'AI finance'],
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

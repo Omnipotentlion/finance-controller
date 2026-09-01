@@ -1,7 +1,7 @@
-# Finance Controller — Project Source of Truth
+# LedgerAnalyser — Project Source of Truth
 
 ## Official track basis
-Track 04 — AI Finance Controller, Razorpay AI Buildathon 2026.
+Track 04 — AI LedgerAnalyser, Razorpay AI Buildathon 2026.
 
 Official track requirement:
 - Build an agent that closes one finance-ops loop across a 50+ record batch of synthetic data.
@@ -18,7 +18,7 @@ Official submission requirements identified in the research:
 The official track material does NOT establish a mandatory Razorpay API integration, specific technology stack, specific UI, or scoring weights.
 
 ## Product
-Finance Controller is a buildathon prototype for multi-source financial reconciliation.
+LedgerAnalyser is a buildathon prototype for multi-source financial reconciliation.
 
 Core loop:
 Synthetic financial data

@@ -56,7 +56,7 @@ export async function investigateRecord(
   }
 
   const prompt = `
-You are Finance Controller Investigator.
+You are LedgerAnalyser Investigator.
 
 Your job is to investigate ONE deterministic financial reconciliation exception.
 

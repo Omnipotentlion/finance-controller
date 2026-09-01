@@ -12,12 +12,12 @@ export function FinanceNav({
   stageLabel,
 }: FinanceNavProps) {
   return (
-    <nav className="fc-nav" aria-label="Finance Controller navigation">
+    <nav className="fc-nav" aria-label="LedgerAnalyser navigation">
       <a href="/" className="fc-nav-brand">
         <span className="fc-nav-mark">FC</span>
 
         <span>
-          <strong>FINANCE CONTROLLER</strong>
+          <strong>LedgerAnalyser</strong>
           <small>CONTROL ROOM</small>
         </span>
       </a>

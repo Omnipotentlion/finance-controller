@@ -1,7 +1,7 @@
 # Synthetic Data Specification
 
 ## Objective
-Create a reproducible, intentionally imperfect dataset that objectively tests the Finance Controller.
+Create a reproducible, intentionally imperfect dataset that objectively tests the LedgerAnalyser.
 
 ## Evaluation batch
 Target: 60 primary payment records, satisfying the official 50+ requirement.
