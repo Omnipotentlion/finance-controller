@@ -14,7 +14,7 @@ export function FinanceNav({
   return (
     <nav className="fc-nav" aria-label="LedgerAnalyser navigation">
       <a href="/" className="fc-nav-brand">
-        <span className="fc-nav-mark">FC</span>
+        <span className="fc-nav-mark">LA</span>
 
         <span>
           <strong>LedgerAnalyser</strong>

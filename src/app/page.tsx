@@ -29,6 +29,7 @@ type PipelineStage =
 export default function Home() {
   const [batchId] = useState(DEFAULT_BATCH_ID)
   const [stage, setStage] = useState<PipelineStage>('idle')
+  const [controlRunStarted, setControlRunStarted] = useState(false)
   const [statusMessage, setStatusMessage] = useState('')
   const [metrics, setMetrics] = useState<MetricsProps>(EMPTY_METRICS)
   const [records, setRecords] = useState<RecordItem[]>([])
@@ -144,6 +145,7 @@ export default function Home() {
 
   const handleRunFullPipeline = async () => {
     try {
+      setControlRunStarted(true)
       setStage('ingesting')
       setStatusMessage('Starting financial control loop…')
 
@@ -244,7 +246,7 @@ export default function Home() {
 
         <div className="fc-system-bar">
           <div className="flex items-center gap-3">
-            <span className="fc-system-mark">FC</span>
+            <span className="fc-system-mark">LA</span>
             <span className="font-semibold tracking-tight">
               LedgerAnalyser
             </span>
@@ -321,24 +323,21 @@ export default function Home() {
                 number="01"
                 label="INGEST"
                 active={stage === 'ingesting'}
-                complete={records.length > 0}
+                complete={controlRunStarted && stage === 'done'}
               />
 
               <ControlStep
                 number="02"
                 label="RECONCILE"
                 active={stage === 'reconciling'}
-                complete={metrics.matched > 0}
+                complete={controlRunStarted && stage === 'done'}
               />
 
               <ControlStep
                 number="03"
                 label="INVESTIGATE"
                 active={false}
-                complete={
-                  metrics.autoResolved > 0 ||
-                  metrics.unresolved > 0
-                }
+                complete={controlRunStarted && stage === 'done'}
               />
 
               <ControlStep
